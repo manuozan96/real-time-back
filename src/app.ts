@@ -31,6 +31,8 @@ app.use("/api/quotes", quoteRouter);
 const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI || "";
 
+console.log("🔎 MONGO_URI:", `"${MONGO_URI}"`);
+
 async function startServer() {
   await Database.connect(MONGO_URI);
 
