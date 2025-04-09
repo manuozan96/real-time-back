@@ -5,10 +5,10 @@ import { createServer } from "http";
 import { Server as SocketIOServer } from "socket.io";
 import { productRouter } from "./interfaces/controllers/routes/product.routes";
 import { quoteRouter } from "./interfaces/controllers/routes/quote.routes";
-import { Database } from "./infastructure/database/moongose";
-import { configureSocket } from "./infastructure/websocket/socketServer";
-import { NotificationService } from "./infastructure/websocket/NotificationService";
 import { userRouter } from "./interfaces/controllers/routes/user.routes";
+import { Database } from "./infrastructure/database/mongoose";
+import { configureSocket } from "./infrastructure/websocket/socketServer";
+import { NotificationService } from "./infrastructure/websocket/NotificationService";
 dotenv.config();
 
 const app = express();

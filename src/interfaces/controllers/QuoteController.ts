@@ -3,7 +3,7 @@ import {
   createQuote,
   listQuotes,
 } from "../../application/use-cases/quoteUseCases";
-import { NotificationService } from "../../infastructure/websocket/NotificationService";
+import { NotificationService } from "../../infrastructure/websocket/NotificationService";
 
 export class QuoteController {
   static async create(req: Request, res: Response) {

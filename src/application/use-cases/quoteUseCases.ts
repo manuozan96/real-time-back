@@ -1,5 +1,5 @@
 import { Quote } from "../../domain/entities/Quote";
-import { QuoteRepository } from "../../infastructure/database/repositories/QuoteRepository";
+import { QuoteRepository } from "../../infrastructure/database/repositories/QuoteRepository";
 
 const quoteRepository = new QuoteRepository();
 

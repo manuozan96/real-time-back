@@ -1,5 +1,5 @@
 import { Product } from "../../domain/entities/Product";
-import { ProductRepository } from "../../infastructure/database/repositories/ProductRepository";
+import { ProductRepository } from "../../infrastructure/database/repositories/ProductRepository";
 
 const productRepository = new ProductRepository();
 

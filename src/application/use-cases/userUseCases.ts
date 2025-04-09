@@ -1,5 +1,5 @@
 import { User } from "../../domain/entities/User";
-import { UserRepository } from "../../infastructure/database/models/UserRepository";
+import { UserRepository } from "../../infrastructure/database/models/UserRepository";
 
 const userRepository = new UserRepository();
 
