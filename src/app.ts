@@ -28,13 +28,9 @@ app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/quotes", quoteRouter);
 
-const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI || "";
-
-if (!MONGO_URI) {
-  console.error(" MONGO_URI not found. Check environment variables.");
-  process.exit(1);
-}
+const PORT = 3000;
+const MONGO_URI =
+  "mongodb+srv://admi:admi@backend.cpfyaqm.mongodb.net/?retryWrites=true&w=majority&appName=backend";
 
 console.log("🔎 MONGO_URI:", `"${MONGO_URI}"`);
 
