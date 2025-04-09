@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Socket Test</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  </head>
+  <body>
+    <h1>Socket.io Test</h1>
+    <div id="messages"></div>
+
+    <script>
+      const socket = io("http://localhost:3000"); // O tu IP / dominio si deployás
+
+      socket.on("connect", () => {
+        console.log("🟢 Connected to WebSocket server:", socket.id);
+        const div = document.getElementById("messages");
+        div.innerHTML += `<p>🟢 Connected as ${socket.id}</p>`;
+      });
+
+      socket.on("new-quote", (quote) => {
+        console.log("📩 New Quote received:", quote);
+        const div = document.getElementById("messages");
+        div.innerHTML += `<p>📩 New Quote: ${JSON.stringify(quote)}</p>`;
+      });
+
+      socket.on("disconnect", () => {
+        console.log("🔴 Disconnected from server");
+        const div = document.getElementById("messages");
+        div.innerHTML += `<p>🔴 Disconnected</p>`;
+      });
+    </script>
+  </body>
+</html>
